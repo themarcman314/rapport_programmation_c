@@ -1,7 +1,8 @@
 # 1. Conception
-## 1.1. Presentation Hardware
-### 1.1.1. Le MCU : STM32F401RE
-#### 1.1.1.1. Le CPU
+## 1.1. Cahier des Charges
+## 1.2. Presentation Hardware
+### 1.2.1. Le MCU : STM32F401RE
+#### 1.2.1.1. Le CPU
 32 bits -> entrées opérations ALU sur 32 bits
 ARM Cortex-M4 + single precision FPU (Floating Point Unit)
 
@@ -27,25 +28,25 @@ ARM Cortex-M4 + single precision FPU (Floating Point Unit)
 - manipulations de pointeurs
 - cyclic redundancy checks (CRC)
 
-#### 1.1.1.2. Les peripheriques
+#### 1.2.1.2. Les peripheriques
 
 (Images DS)
 
-### 1.1.2. Bouton
+### 1.2.2. Bouton
 (schema electrique bouton avec pullup/pulldown)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique GPIO... (voir partie Mise en oeuvre)
 
-### 1.1.3. Buzzeur (Passif)
+### 1.2.3. Buzzeur (Passif)
 (photo/schema electrique bouton)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique TIMER...
     
-### 1.1.4. Matrice LED
+### 1.2.4. Matrice LED
 (photo/schema registre a decalage)
 
 (explication du choix composant)
@@ -54,19 +55,19 @@ On a choisi d'utiliser le peripherique GPIO (avec Bit Banging)...
 
 On pourra eventuellement utiliser SPI...
 
-### 1.1.5. Mesure du temps (heure/calendrier)
+### 1.2.5. Mesure du temps (heure/calendrier)
 (explication du choix de ce peripherique par rapport a une autre methode genre HAL_Delay ou timeur classique)
 
 On a choisi d'utiliser le peripherique RTC...
 
-### 1.1.6. Mesure de temperature
+### 1.2.6. Mesure de temperature
 (photo/schema electrique capteur)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique I2C...
 
-### 1.1.7. Economie d'energie
+### 1.2.7. Economie d'energie
 (explication de l'interet du mode basse conso)
 
 On a choisi d'utiliser le peripherique PWR...
