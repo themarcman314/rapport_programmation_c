@@ -1,10 +1,12 @@
-# Conception
-## Presentation Hardware
-### Le MCU : STM32F401RE
-#### Le CPU
+# 1. Conception
+## 1.1. Presentation Hardware
+### 1.1.1. Le MCU : STM32F401RE
+#### 1.1.1.1. Le CPU
 32 bits -> entrées opérations ALU sur 32 bits
 ARM Cortex-M4 + single precision FPU (Floating Point Unit)
-FPU : 
+
+**FPU : **
+
 - additions
 - soustractions
 - multiplications
@@ -14,32 +16,36 @@ FPU :
 - conversions entre virgule fixe and virgule flotante
 - instructions pour des constantes virgule-flotante
 
-DMIPS : Dhrystone MIPS -> spécifique pour comparer dans la même architecture
+**DMIPS :** Dhrystone MIPS -> spécifique pour comparer dans la même architecture
     https://www.elektroda.com/rtvforum/topic2908657.html
     https://en.wikipedia.org/wiki/Dhrystone
 
-CoreMark : Métrique du Embedded Microprocessor Benchmark Consortium (EEMBC).
+**CoreMark :** Métrique du Embedded Microprocessor Benchmark Consortium (EEMBC).
+
 - manipulation de matrices
 - operations mathematiques
 - manipulations de pointeurs
 - cyclic redundancy checks (CRC)
 
-#### Les peripheriques
+#### 1.1.1.2. Les peripheriques
+
 (Images DS)
 
-### Bouton
+### 1.1.2. Bouton
 (schema electrique bouton avec pullup/pulldown)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique GPIO... (voir partie Mise en oeuvre)
-### Buzzeur (Passif)
+
+### 1.1.3. Buzzeur (Passif)
 (photo/schema electrique bouton)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique TIMER...
-### Matrice LED
+    
+### 1.1.4. Matrice LED
 (photo/schema registre a decalage)
 
 (explication du choix composant)
@@ -47,25 +53,31 @@ On a choisi d'utiliser le peripherique TIMER...
 On a choisi d'utiliser le peripherique GPIO (avec Bit Banging)...
 
 On pourra eventuellement utiliser SPI...
-### Mesure du temps (heure/calendrier)
+
+### 1.1.5. Mesure du temps (heure/calendrier)
 (explication du choix de ce peripherique par rapport a une autre methode genre HAL_Delay ou timeur classique)
 
 On a choisi d'utiliser le peripherique RTC...
-### Mesure de temperature
+
+### 1.1.6. Mesure de temperature
 (photo/schema electrique capteur)
 
 (explication du choix composant)
 
 On a choisi d'utiliser le peripherique I2C...
-### Economie d'energie
+
+### 1.1.7. Economie d'energie
 (explication de l'interet du mode basse conso)
 
 On a choisi d'utiliser le peripherique PWR...
 
-# Workflow de programmation systemes embarques
+# 2. Workflow de programmation systemes embarques
+## 2.1 SDK/API
 - STM32Cube
     - HAL et LL
     - Bare Metal
+
+## 2.2 Ressources 
 - DS 
 La datasheet contient les informations qui sont specifiques au composant (en l'occurence MCU).
 On trouve jamais des informations de programmation sur la datasheet.
@@ -73,23 +85,27 @@ On trouve jamais des informations de programmation sur la datasheet.
 Le Reference Manual contient les informations des modes d'utilisation de chaque peripherque pour un ensemble de MCU de la meme famille. Il indique aussi comment programmer en BM (Bare Metal) c-a-d en utilisant les registres.
 - UM
 Le User Manual donne a l'utilisateur (au programmeur) les informations necessaires pour mettre en oeuvre les fonctionalites du MCU avec les librairies HAL et LL mises a disposition.
+- (videos? bof...)
 
-# Mise en oeuvre
-## Pas de lien direct avec le projet
-### Blinky
-### Sortie UART
-### GPS
+## 2.3 STM32CubeIDE
+**Roudy et sa partie sur l'IDE**
 
-## Fonctionalites **pour le projet**
+# 3. Mise en oeuvre
+## 3.1. Pas de lien direct avec le projet
+### 3.1.1. Blinky
+### 3.1.1. Sortie UART
+### 3.1.1. GPS
+
+## 3.2. Fonctionalites **pour le projet**
 J'ai fait expres de mettre uniquement les noms des peripheriques ici.
 C'est fait expres pour montrer exactement le choix technologique.
 Les parties de mise en oeuvre sont dans le meme ordre que celles qui explique les compostants choisi
 
-### GPIO (IN) lecture bloquante et avec systick (HAL_GetTick)
-### TIMER (OC/PWM)
-### Bit Banging avec GPIO (OUT) / NVIC Interruptions / SPI
-### RTC
-### I2C
-### PWR
+### 3.2.1. GPIO (IN) lecture bloquante et avec systick (HAL_GetTick)
+### 3.2.2. TIMER (OC/PWM)
+### 3.2.3. Bit Banging avec GPIO (OUT) / NVIC Interruptions / SPI
+### 3.2.4. RTC
+### 3.2.5. I2C
+### 3.2.6. PWR
 
 **Mettez un maxxx de captures d'ecran pour justifier le code/cablage**
