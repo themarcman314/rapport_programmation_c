@@ -95,7 +95,7 @@ Etapes "compilation" (c-a-d passage de code source c vers langague machine):
 
 - Pre-compilation
 - Compilation
-- ~~Assemblage~~
+- ~~Assemblage~~ (car c'est relatif a l'assembleur uniquement mais les programmes comme gcc font aussi)
 - Liaison
 
 Courte explication :
