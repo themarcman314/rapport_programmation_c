@@ -5,7 +5,7 @@
 32 bits -> entrées opérations ALU sur 32 bits
 ARM Cortex-M4 + single precision FPU (Floating Point Unit)
 
-**FPU : **
+**FPU :**
 
 - additions
 - soustractions
