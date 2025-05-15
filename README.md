@@ -103,9 +103,6 @@ Courte explication :
 - Structures
 - Pointeurs
 
-
-# 4. Workflow de programmation systemes embarques
-
 # 4. Mise en oeuvre
 ## 4.1. Pas de lien direct avec le projet
 ### 4.1.1. Blinky
