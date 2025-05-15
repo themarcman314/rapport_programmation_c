@@ -90,22 +90,40 @@ Le User Manual donne a l'utilisateur (au programmeur) les informations necessair
 ## 2.3 STM32CubeIDE
 **Roudy et sa partie sur l'IDE**
 
-# 3. Mise en oeuvre
-## 3.1. Pas de lien direct avec le projet
-### 3.1.1. Blinky
-### 3.1.1. Sortie UART
-### 3.1.1. GPS
+# 3. Langague c
+Etapes "compilation" (c-a-d passage de code source c vers langague machine):
 
-## 3.2. Fonctionalites **pour le projet**
+- Pre-compilation
+- Compilation
+- ~~Assemblage~~
+- Liaison
+
+Courte explication :
+- Syntaxe fonction
+- Structures
+- Pointeurs
+
+
+# 4. Workflow de programmation systemes embarques
+
+# 4. Mise en oeuvre
+## 4.1. Pas de lien direct avec le projet
+### 4.1.1. Blinky
+### 4.1.2. Sortie UART
+Photo st-link explication conversion UART - USB
+### 4.1.3. GPS
+### 4.1.4. Memoire Flash
+
+## 4.2. Fonctionalites **pour le projet**
 J'ai fait expres de mettre uniquement les noms des peripheriques ici.
 C'est fait expres pour montrer exactement le choix technologique.
 Les parties de mise en oeuvre sont dans le meme ordre que celles qui explique les compostants choisi
 
-### 3.2.1. GPIO (IN) lecture bloquante et avec systick (HAL_GetTick)
-### 3.2.2. TIMER (OC/PWM)
-### 3.2.3. Bit Banging avec GPIO (OUT) / NVIC Interruptions / SPI
-### 3.2.4. RTC
-### 3.2.5. I2C
-### 3.2.6. PWR
+### 4.2.1. GPIO (IN) lecture bloquante et avec systick (HAL_GetTick)
+### 4.2.2. TIMER (OC/PWM)
+### 4.2.3. Bit Banging avec GPIO (OUT) / NVIC Interruptions / SPI
+### 4.2.4. RTC
+### 4.2.5. I2C
+### 4.2.6. PWR
 
 **Mettez un maxxx de captures d'ecran pour justifier le code/cablage**
